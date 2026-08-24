@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, ChevronDown } from 'lucide-react';
+import { ArrowRight, Download, Mail, ChevronDown, ExternalLink } from 'lucide-react';
 import StrokeText from './StrokeText';
 import './Hero.css';
 
@@ -96,14 +96,13 @@ const Hero = () => {
               Contact Me <Mail size={16} />
             </button>
             <a 
-              href="/resume.pdf" 
-              download 
-              className="btn btn-outline" 
-              aria-label="Download Resume" 
+              href="https://docs.google.com/document/d/19DmIaDWTzXMFVO1OEMY5PDzUd5vR0dHl/edit?usp=sharing&ouid=117190246985870480053&rtpof=true&sd=true" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="btn btn-outline" 
+              aria-label="View Resume" 
             >
-              Resume <Download size={16} />
+              Resume <ExternalLink size={16} />
             </a>
           </motion.div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FileText, ExternalLink } from 'lucide-react';
 import Avatar3D from './Avatar3D';
 import StrokeText from './StrokeText';
 import './About.css';
@@ -74,6 +75,17 @@ const About = () => {
                   <p className="stat-label">{stat.label}</p>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="mt-6">
+              <a 
+                href="https://docs.google.com/document/d/19DmIaDWTzXMFVO1OEMY5PDzUd5vR0dHl/edit?usp=sharing&ouid=117190246985870480053&rtpof=true&sd=true" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-outline flex items-center gap-2 w-fit" 
+              >
+                View Official Resume <ExternalLink size={16} />
+              </a>
             </div>
           </motion.div>
 
