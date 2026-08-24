@@ -45,6 +45,7 @@ const Hero = () => {
           
           {/* Main Display Title with StrokeText */}
           <div className="w-full my-2">
+            <h1 className="sr-only">Ruban Raj.S — Frontend Developer &amp; MCA Student</h1>
             <StrokeText 
               text="RUBAN RAJ.S" 
               strokeColor="#ffffff" 
@@ -68,7 +69,7 @@ const Hero = () => {
               animate={{ y: "0%", opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             >
-              Full Stack Developer
+              Frontend Developer &amp; MCA Student
             </motion.h2>
           </div>
           
@@ -79,7 +80,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0, duration: 0.9 }}
           >
-            Building scalable and modern web applications. Passionate about crafting beautiful, intuitive, and highly functional digital experiences.
+            Ruban Raj.S is a Frontend Developer and MCA student at Madurai Kamaraj University in Tamil Nadu, India, focused on building modern, responsive, and user-centered web applications.
           </motion.p>
           
           {/* CTAs */}

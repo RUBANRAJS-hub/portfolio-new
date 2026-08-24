@@ -1,0 +1,5 @@
+# Allow search engine crawlers and AI search agents
+User-agent: *
+Allow: /
+
+Sitemap: https://rubanraj.me/sitemap.xml

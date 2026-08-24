@@ -51,13 +51,13 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="highlight-lead">
-              I am a Full Stack Developer and MCA student at Madurai Kamaraj University.
+              Ruban Raj.S is a Frontend Developer and MCA student at Madurai Kamaraj University, based in Madurai, Tamil Nadu, India, associated with Shorubenix Info Technology.
             </p>
             <p className="about-body">
-              My journey in tech is driven by an intense passion for building scalable, high-performance web applications that solve real-world problems. I enjoy working across the entire stack, from designing intuitive user interfaces to architecting robust backend APIs.
+              Specializing in React.js, JavaScript, HTML5, CSS3, Tailwind CSS, and full-stack software engineering, Ruban Raj (also known as Ruban Raj S or RubanRaj) builds high-performance, responsive web applications and interactive 3D digital web experiences.
             </p>
             <p className="about-body">
-              Whether it's creating full-stack hospital management systems, cryptography engines, or interactive 3D web experiences, I approach every project with clean architectural standards and continuous learning.
+              From building hospital management applications and data encryption tools to AI-powered threat detection systems and modern web interfaces, Ruban Raj approaches software development with clean architecture, semantic precision, and continuous innovation.
             </p>
             
             {/* Monochromatic Spatial Stat Cards */}
