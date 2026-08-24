@@ -68,8 +68,12 @@ const Navbar = () => {
               const isActive = activeSection === link.id;
               return (
                 <li key={link.id} className="nav-item">
-                  <button
-                    onClick={() => scrollTo(link.id)}
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo(link.id);
+                    }}
                     className={`nav-link-btn ${isActive ? 'active' : ''}`}
                   >
                     {isActive && (
@@ -80,7 +84,7 @@ const Navbar = () => {
                       />
                     )}
                     <span className="nav-link-text">{link.name}</span>
-                  </button>
+                  </a>
                 </li>
               );
             })}
@@ -109,12 +113,16 @@ const Navbar = () => {
           <ul className="mobile-nav-menu">
             {navLinks.map((link) => (
               <li key={link.id} className="mobile-nav-item">
-                <button
+                <a
+                  href={`#${link.id}`}
                   className={`mobile-menu-link ${activeSection === link.id ? 'active' : ''}`}
-                  onClick={() => scrollTo(link.id)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo(link.id);
+                  }}
                 >
                   {link.name}
-                </button>
+                </a>
               </li>
             ))}
           </ul>

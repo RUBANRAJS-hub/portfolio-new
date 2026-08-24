@@ -120,7 +120,7 @@ const SpatialVoidLoader = ({ onComplete }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="spatial-brand-name">RUBAN RAJ.S</h1>
+          <div className="spatial-brand-name">RUBAN RAJ.S</div>
           <p className="spatial-brand-sub">FULL STACK DEVELOPER & CREATIVE TECHNOLOGIST</p>
         </motion.div>
 

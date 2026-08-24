@@ -1,0 +1,26 @@
+# Ruban Raj.S — Personal Brand & Developer Identity Summary
+
+> Ruban Raj.S is a Frontend Developer and MCA student at Madurai Kamaraj University based in Madurai, Tamil Nadu, India, associated with Shorubenix Info Technology.
+
+## Key Identity Details
+- Primary Name: Ruban Raj.S
+- Search Variants: Ruban Raj, Ruban Raj S, RubanRaj, Ruben Raj, Ruban Rj, Rubanraaj
+- Role: Frontend Developer & Creative Technologist
+- Education: Master of Computer Applications (MCA), Madurai Kamaraj University
+- Location: Madurai, Tamil Nadu, India
+- Organization: Shorubenix Info Technology
+- Official Domain: https://www.rubanraj.me/
+- Alternate Domain: https://rubanraj.me/
+- GitHub Profiles: https://github.com/ruban200 & https://github.com/RUBANRAJS-hub
+- LinkedIn Profile: https://www.linkedin.com/in/rubanraj-s-/
+
+## Core Technical Competencies
+- Frontend Technologies: React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Three.js, Framer Motion
+- Software Architecture: Full Stack Systems, REST APIs, Cryptography Engines, Responsive Web Design
+- Languages: JavaScript, Python, Java, HTML, CSS, SQL
+
+## Key Projects & Achievements
+- Full Stack Hospital & Healthcare Management Systems
+- Cryptography & Threat Intelligence Engines
+- Interactive 3D Web & Spatial Digital Interfaces
+- Scope Tech Java Full Stack Development Internship Certification
