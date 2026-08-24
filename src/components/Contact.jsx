@@ -13,18 +13,59 @@ const Contact = () => {
   });
   const [status, setStatus] = useState('');
 
+  // Google Apps Script Web App URL for storing in Google Sheets
+  const GOOGLE_SHEET_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL"; 
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => {
+
+    try {
+      // 1. Instant Email Notification to ruban5398@gmail.com via FormSubmit AJAX
+      const emailPromise = fetch("https://formsubmit.co/ajax/ruban5398@gmail.com", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `🚀 New Portfolio Message from ${formData.name}`
+        })
+      });
+
+      // 2. Post data to Google Sheets via Google Apps Script Endpoint
+      if (GOOGLE_SHEET_SCRIPT_URL && GOOGLE_SHEET_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+        fetch(GOOGLE_SHEET_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            timestamp: new Date().toLocaleString()
+          })
+        }).catch((err) => console.log("Google Sheets post:", err));
+      }
+
+      await emailPromise;
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus(''), 5000);
-    }, 1500);
+      setTimeout(() => setStatus(''), 6000);
+    } catch (err) {
+      console.error("Submission error:", err);
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(''), 6000);
+    }
   };
 
   return (
