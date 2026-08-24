@@ -24,9 +24,17 @@ const Contact = () => {
     e.preventDefault();
     setStatus('sending');
 
+    // Construct formatted WhatsApp message to 6384640244
+    const whatsappText = `Hello Ruban! 👋\n\n` +
+      `👤 *Name:* ${formData.name}\n` +
+      `✉️ *Email:* ${formData.email}\n\n` +
+      `💬 *Message:* ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/916384640244?text=${encodeURIComponent(whatsappText)}`;
+
     try {
-      // 1. Instant Email Notification to ruban5398@gmail.com via FormSubmit AJAX
-      const emailPromise = fetch("https://formsubmit.co/ajax/ruban5398@gmail.com", {
+      // 1. Instant Email Notification to ruban5398@gmail.com
+      fetch("https://formsubmit.co/ajax/ruban5398@gmail.com", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
@@ -38,30 +46,17 @@ const Contact = () => {
           message: formData.message,
           _subject: `🚀 New Portfolio Message from ${formData.name}`
         })
-      });
+      }).catch((err) => console.log("Email notification:", err));
 
-      // 2. Post data to Google Sheets via Google Apps Script Endpoint
-      if (GOOGLE_SHEET_SCRIPT_URL && GOOGLE_SHEET_SCRIPT_URL !== "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
-        fetch(GOOGLE_SHEET_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-            timestamp: new Date().toLocaleString()
-          })
-        }).catch((err) => console.log("Google Sheets post:", err));
-      }
-
-      await emailPromise;
+      // 2. Open Direct WhatsApp Chat to +916384640244
+      window.open(whatsappUrl, '_blank');
 
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus(''), 6000);
     } catch (err) {
       console.error("Submission error:", err);
+      window.open(whatsappUrl, '_blank');
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus(''), 6000);
