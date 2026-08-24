@@ -17,12 +17,16 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
   const [loading, setLoading] = useState(true);
 
+  const handleLoaderComplete = React.useCallback(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <div className="app-container">
       {/* Unique Spatial Void Black-Theme Loader Screen */}
       <AnimatePresence>
         {loading && (
-          <SpatialVoidLoader onComplete={() => setLoading(false)} />
+          <SpatialVoidLoader onComplete={handleLoaderComplete} />
         )}
       </AnimatePresence>
 

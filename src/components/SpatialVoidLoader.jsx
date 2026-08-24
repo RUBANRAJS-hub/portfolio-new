@@ -13,6 +13,11 @@ const SpatialVoidLoader = ({ onComplete }) => {
     "04 // SYSTEM READY // ENTERING VOID"
   ];
 
+  const onCompleteRef = React.useRef(onComplete);
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
+
   useEffect(() => {
     // Fast numeric progress counter
     const interval = setInterval(() => {
@@ -20,13 +25,13 @@ const SpatialVoidLoader = ({ onComplete }) => {
         if (prev >= 100) {
           clearInterval(interval);
           setTimeout(() => {
-            if (onComplete) onComplete();
-          }, 500);
+            if (onCompleteRef.current) onCompleteRef.current();
+          }, 300);
           return 100;
         }
         return prev + 1;
       });
-    }, 25);
+    }, 20);
 
     // Status text phase change
     const statusInterval = setInterval(() => {
@@ -37,7 +42,7 @@ const SpatialVoidLoader = ({ onComplete }) => {
       clearInterval(interval);
       clearInterval(statusInterval);
     };
-  }, [onComplete]);
+  }, []);
 
   return (
     <motion.div 
