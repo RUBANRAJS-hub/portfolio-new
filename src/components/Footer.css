@@ -1,0 +1,93 @@
+.footer {
+  background: #030305;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-logo span {
+  color: #71717a;
+}
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #71717a;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+.footer-made-with {
+  font-size: 0.8rem;
+  color: #71717a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.heart-icon {
+  color: #ffffff;
+}
+
+.back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  background: #ffffff;
+  color: #030305;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}

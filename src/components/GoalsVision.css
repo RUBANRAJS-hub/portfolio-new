@@ -1,0 +1,50 @@
+.goals-vision-section {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, rgba(3, 3, 5, 0) 70%);
+}
+
+.goals-statement-wrapper {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.vision-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.goals-statement-title {
+  font-size: clamp(2.5rem, 6.5vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.statement-dot {
+  color: #a1a1aa;
+}
+
+.goals-statement-sub {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  color: #a1a1aa;
+  max-width: 650px;
+  line-height: 1.7;
+  font-weight: 300;
+}

@@ -1,0 +1,192 @@
+.robot-loader-overlay.black-theme {
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.robot-loader-bg-glow {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.holo-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.holo-particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.holo-particle-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.robot-loader-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+/* Speech Bubble - Pure Black Obsidian Theme */
+.robot-speech-bubble {
+  position: relative;
+  background: rgba(10, 10, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.85rem 1.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95), 0 0 30px rgba(255, 255, 255, 0.1);
+  min-width: 290px;
+  text-align: center;
+}
+
+.robot-speech-text {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  margin: 0;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+.speech-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Robot SVG Wrapper */
+.robot-svg-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95));
+}
+
+/* Sweeping White Laser Scanner Beam */
+.holo-scan-beam {
+  position: absolute;
+  top: 50%;
+  width: 220px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, #a1a1aa, transparent);
+  box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff;
+  pointer-events: none;
+  border-radius: 9999px;
+  opacity: 0.7;
+}
+
+.robot-loader-brand {
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.system-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ffffff;
+  animation: pulse-status 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-status {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Progress Bar Track */
+.robot-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 280px;
+}
+
+.robot-progress-bar {
+  flex: 1;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.robot-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #71717a 0%, #ffffff 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 15px #ffffff;
+  transition: width 0.04s linear;
+}
+
+.robot-progress-text {
+  font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  min-width: 40px;
+  text-align: right;
+}
