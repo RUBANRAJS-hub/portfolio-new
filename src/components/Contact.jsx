@@ -104,7 +104,7 @@ const Contact = () => {
 
                 <div className="social-row">
                   <a 
-                    href="https://github.com/rubanraj-s" 
+                    href="https://github.com/RUBANRAJS-hub" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="social-badge-link"
@@ -113,7 +113,7 @@ const Contact = () => {
                     <Github size={20} />
                   </a>
                   <a 
-                    href="https://www.linkedin.com/in/ruban-raj-s-62880836a/" 
+                    href="https://www.linkedin.com/in/rubanraj-s-" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="social-badge-link"

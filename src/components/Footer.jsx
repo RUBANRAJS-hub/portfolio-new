@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ArrowUp } from 'lucide-react';
+import { Heart, ArrowUp, Github, Linkedin } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -26,6 +26,26 @@ const Footer = () => {
           </div>
 
           <div className="footer-center">
+            <div className="footer-socials flex items-center justify-center gap-4 mb-2">
+              <a 
+                href="https://github.com/RUBANRAJS-hub" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zinc-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={16} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/rubanraj-s-" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zinc-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={16} />
+              </a>
+            </div>
             <p className="footer-copyright">
               © {currentYear} Ruban Raj.S. All rights reserved.
             </p>
